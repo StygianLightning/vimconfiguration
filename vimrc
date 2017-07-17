@@ -1,3 +1,10 @@
+" Enable filetype plugins
+filetype plugin on
+filetype indent on
+
+" Set to auto read when a file is changed from the outside
+set autoread
+
 inoremap jk <ESC>
 
 vnoremap . :norm.<CR>
@@ -44,7 +51,7 @@ set noswapfile
 
 "unmap arrow keys
 
-remap <Up> <Nop>
+noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>

@@ -36,10 +36,15 @@ set si
 
 set wrap
 
-set nobackup " We have vcs, we don't need backups.
+set nobackup
 
-set nowritebackup " We have vcs, we don't need backups.
+set nowritebackup
 
-set noswapfile " They're just annoying. Who likes them?
+set noswapfile
 
-set colo desert
+"unmap arrow keys
+
+remap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>

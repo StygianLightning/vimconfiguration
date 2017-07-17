@@ -1,0 +1,9 @@
+[submodule "pack/my-plugins/vimtex"]
+	path = pack/my-plugins/vimtex
+	url = https://github.com/lervag/vimtex
+[submodule "pack/my-plugins/start/vim-tex/vimtex"]
+	path = pack/my-plugins/start/vim-tex/vimtex
+	url = https://github.com/lervag/vimtex
+[submodule "pack/my-plugins/start/vimtex"]
+	path = pack/my-plugins/start/vimtex
+	url = https://github.com/lervag/vimtex

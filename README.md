@@ -6,8 +6,7 @@ Synchronise your Vim settings on different machines.
 
 ### Set-up ###
 
-Run a command line as admin and make a symbolic link from the .vimrc file in the repository to 
-%userprofile%\vimfiles\vimrc (no dot on Windows!)
+The vimrc file lives under %userprofile%\vimfiles\vimrc on Windows (note that there's no dot), so you only need to create a symbolic link and you're done.
 Assuming the repository path is D:\VimConfiguration\, the command would be
-mklink C:\Users\XXX\vimfiles\vimrc D:\VimConfiguration\.vimrc
+mklink /J C:\Users\XXX\vimfiles D:\VimConfiguration
 

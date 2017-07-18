@@ -57,6 +57,10 @@ noremap <Left> <Nop>
 noremap <Right> <Nop>
 
 
+noremap <C-S> :update<CR>
+vmap <C-s> <esc>:w<CR>gv
+inoremap <c-s> <c-o>:Update<CR><CR>
+
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'

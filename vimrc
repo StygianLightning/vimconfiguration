@@ -43,12 +43,6 @@ set si
 
 set wrap
 
-set nobackup
-
-set nowritebackup
-
-set noswapfile
-
 "unmap arrow keys
 
 noremap <Up> <Nop>

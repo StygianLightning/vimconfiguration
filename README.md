@@ -10,3 +10,5 @@ The vimrc file lives under %userprofile%\vimfiles\vimrc on Windows (note that th
 Assuming the repository path is D:\VimConfiguration\, the command would be
 mklink /J C:\Users\XXX\vimfiles D:\VimConfiguration
 
+To install the plugins, simply execute :PlugInstall
+

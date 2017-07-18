@@ -55,3 +55,14 @@ noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+
+
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/vimfiles/plugged')
+
+Plug 'lervag/vimtex'
+
+" Initialize plugin system
+call plug#end()

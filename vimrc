@@ -64,3 +64,9 @@ Plug 'lervag/vimtex'
 
 " Initialize plugin system
 call plug#end()
+
+command PdfLatex execute "!pdflatex -synctex=1 -interaction=nonstopmode main.tex"
+
+command CopyOutputFile execute "!copy main.pdf main-copy.pdf"
+
+noremap <leader>ll :PdfLatex <CR> :CopyOutputFile <CR> 

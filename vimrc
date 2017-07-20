@@ -70,7 +70,11 @@ Plug 'lervag/vimtex'
 call plug#end()
 
 command PdfLatex silent exec "!pdflatex -synctex=1 -interaction=nonstopmode main.tex"
+command PdfLatexDebug execute "!pdflatex -synctex=1 -interaction=nonstopmode main.tex"
 
-command CopyOutputFile silent exec "!copy main.pdf main-copy.pdf"
+command PdfView silent! exec "!sumatrapdf main.pdf"
 
-noremap <leader>ll :PdfLatex <CR> :PdfLatex <CR> :CopyOutputFile <CR> 
+noremap <leader>ll :PdfLatex <CR> :PdfLatex <CR> 
+
+noremap <leader>lv :PdfView <CR>
+

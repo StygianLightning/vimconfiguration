@@ -29,6 +29,10 @@ set novisualbell
 
 set t_vb=
 
+"disable bells
+autocmd GUIEnter * set vb t_vb= " for your GUI
+autocmd VimEnter * set vb t_vb=
+
 set tm=500
 
 set encoding=utf8
@@ -65,8 +69,8 @@ Plug 'lervag/vimtex'
 " Initialize plugin system
 call plug#end()
 
-command PdfLatex execute "!pdflatex -synctex=1 -interaction=nonstopmode main.tex"
+command PdfLatex silent exec "!pdflatex -synctex=1 -interaction=nonstopmode main.tex"
 
-command CopyOutputFile execute "!copy main.pdf main-copy.pdf"
+command CopyOutputFile silent exec "!copy main.pdf main-copy.pdf"
 
-noremap <leader>ll :PdfLatex <CR> :CopyOutputFile <CR> 
+noremap <leader>ll :PdfLatex <CR> :PdfLatex <CR> :CopyOutputFile <CR> 

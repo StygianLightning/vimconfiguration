@@ -70,11 +70,12 @@ Plug 'lervag/vimtex'
 call plug#end()
 
 command PdfLatex silent exec "!pdflatex -synctex=1 -interaction=nonstopmode main.tex"
+command Bibtex silent exec "!bibtex main"
 command PdfLatexDebug execute "!pdflatex -synctex=1 -interaction=nonstopmode main.tex"
 
 command PdfView silent! exec "!sumatrapdf main.pdf"
 
-noremap <leader>ll :PdfLatex <CR> :PdfLatex <CR> 
+noremap <leader>ll :PdfLatex <CR> :Bibtex <CR> :PdfLatex <CR> :PdfLatex <CR> 
 
 noremap <leader>lv :PdfView <CR>
 

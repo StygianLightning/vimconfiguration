@@ -75,7 +75,7 @@ command PdfLatexDebug execute "!pdflatex -synctex=1 -interaction=nonstopmode mai
 
 command PdfView silent! exec "!sumatrapdf main.pdf"
 
-noremap <leader>ll :PdfLatex <CR> :Bibtex <CR> :PdfLatex <CR> :PdfLatex <CR> 
+noremap <leader>ll :PdfLatex <CR> :PdfLatex <CR> :Bibtex <CR> :PdfLatex <CR> 
 
 noremap <leader>lv :PdfView <CR>
 

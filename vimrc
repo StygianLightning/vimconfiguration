@@ -2,6 +2,8 @@
 filetype plugin on
 filetype indent on
 
+set nocompatible
+
 " Set to auto read when a file is changed from the outside
 set autoread
 
@@ -79,3 +81,4 @@ noremap <leader>ll :PdfLatex <CR> :PdfLatex <CR> :Bibtex <CR> :PdfLatex <CR>
 
 noremap <leader>lv :PdfView <CR>
 
+set backspace=indent,eol,start

@@ -70,19 +70,20 @@ call plug#begin('~/vimfiles/plugged')
 Plug 'haya14busa/incsearch.vim'
 Plug 'elzr/vim-json'
 Plug 'scrooloose/nerdtree'
+Plug 'elzr/vim-json'
 
 " Initialize plugin system
 call plug#end()
 
-command PdfLatex silent exec "!pdflatex -synctex=1 -interaction=nonstopmode main.tex"
-command Bibtex silent exec "!bibtex main"
-command PdfLatexDebug execute "!pdflatex -synctex=1 -interaction=nonstopmode main.tex"
+" command PdfLatex silent exec "!pdflatex -synctex=1 -interaction=nonstopmode main.tex"
+" command Bibtex silent exec "!bibtex main"
+" command PdfLatexDebug execute "!pdflatex -synctex=1 -interaction=nonstopmode main.tex"
 
-command PdfView silent! exec "!sumatrapdf main.pdf"
+" command PdfView silent! exec "!sumatrapdf main.pdf"
 
-noremap <leader>ll :PdfLatex <CR> :Bibtex <CR> :PdfLatex <CR> :PdfLatex <CR> 
+" noremap <leader>ll :PdfLatex <CR> :Bibtex <CR> :PdfLatex <CR> :PdfLatex <CR> 
 
-noremap <leader>lv :PdfView <CR>
+" noremap <leader>lv :PdfView <CR>
 
 set backspace=indent,eol,start
 autocmd vimenter * NERDTree

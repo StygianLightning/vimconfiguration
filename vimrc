@@ -66,7 +66,8 @@ inoremap <c-s> <c-o>:Update<CR><CR>
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/vimfiles/plugged')
 
-Plug 'lervag/vimtex'
+"Plug 'lervag/vimtex'
+Plug 'scrooloose/nerdtree'
 
 " Initialize plugin system
 call plug#end()
@@ -82,3 +83,4 @@ noremap <leader>ll :PdfLatex <CR> :Bibtex <CR> :PdfLatex <CR> :PdfLatex <CR>
 noremap <leader>lv :PdfView <CR>
 
 set backspace=indent,eol,start
+autocmd vimenter * NERDTree

@@ -67,6 +67,8 @@ inoremap <c-s> <c-o>:Update<CR><CR>
 call plug#begin('~/vimfiles/plugged')
 
 "Plug 'lervag/vimtex'
+Plug 'haya14busa/incsearch.vim'
+Plug 'elzr/vim-json'
 Plug 'scrooloose/nerdtree'
 
 " Initialize plugin system

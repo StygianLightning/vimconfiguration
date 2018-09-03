@@ -86,4 +86,6 @@ call plug#end()
 " noremap <leader>lv :PdfView <CR>
 
 set backspace=indent,eol,start
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
+map <C-n> :NERDTreeToggle<CR>
+

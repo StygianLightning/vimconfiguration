@@ -66,11 +66,10 @@ inoremap <c-s> <c-o>:Update<CR><CR>
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/vimfiles/plugged')
 
-"Plug 'lervag/vimtex'
+" Plug 'lervag/vimtex'
 Plug 'haya14busa/incsearch.vim'
-Plug 'elzr/vim-json'
 Plug 'scrooloose/nerdtree'
-Plug 'elzr/vim-json'
+" Plug 'elzr/vim-json'
 
 " Initialize plugin system
 call plug#end()

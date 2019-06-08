@@ -1,35 +1,54 @@
+set nocompatible
+
 " Enable filetype plugins
+filetype on
 filetype plugin on
 filetype indent on
 
-set nocompatible
+syntax on
+
+set hidden
 
 " Set to auto read when a file is changed from the outside
 set autoread
 
-inoremap jk <ESC>
+" colo murphy
 
-vnoremap . :norm.<CR>
+set nowrap "don't wrap lines
+" set wrap
 
-set relativenumber
+set lazyredraw "don't update the display while executing macros
+set showmode " show the mode you're in
 
-set ignorecase
+set wildmenu " Enable enhanded command-line completion. Presumes you have compiled with +wildmenu; see :help 'wildmenu'
+set encoding=utf8
 
-set smartcase
+set tabstop=4 " tab = four spaces
+set backspace=indent,eol,start " allow backspacing over everything in insert modw
+set autoindent " always set autoindenting on
+set copyindent    " copy the previous indentation on autoindenting
+" set number        " always show line numbers
+set relativenumber " always show relative line numbers
+set shiftwidth=4  " number of spaces to use for autoindenting
+set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
+set showmatch     " set show matching parenthesis
+set ignorecase    " ignore case when searching
+set smartcase     " ignore case if search pattern is all lowercase,
+                    "    case-sensitive otherwise
+set smarttab      " insert tabs on the start of a line according to
+                    "    shiftwidth, not tabstop
+set hlsearch      " highlight search terms
+set incsearch     " show search matches as you type
 
-set hlsearch
+set history=1000         " remember more commands and search history
+set undolevels=1000      " use many muchos levels of undo
+set wildignore=*.swp,*.bak,*.pyc,*.class
+set title                " change the terminal's title
+set visualbell           " don't beep
+" set novisualbell
+set noerrorbells         " don't beep
+set t_vb= " set the visual bell to never flash
 
-set incsearch 
-
-set lazyredraw 
-
-set showmatch
-
-set noerrorbells
-
-set novisualbell
-
-set t_vb=
 
 "disable bells
 autocmd GUIEnter * set vb t_vb= " for your GUI
@@ -37,29 +56,30 @@ autocmd VimEnter * set vb t_vb=
 
 set tm=500
 
-set encoding=utf8
 
-set smarttab
-
-set tabstop=4
-
-set ai
-
-set si
-
-set wrap
+" --------------------------------------------
+"  MAPPINGS
+" --------------------------------------------
+"
+"treat jk as ESC
+inoremap jk <ESC> 
+" allow applying the last action to the selected text/lines
+vnoremap . :norm.<CR> 
 
 "unmap arrow keys
-
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
-
+" allow saving with Ctrl + S
 noremap <C-S> :update<CR>
 vmap <C-s> <esc>:w<CR>gv
 inoremap <c-s> <c-o>:Update<CR><CR>
+
+" --------------------------------------------
+"  PLUGINS
+" --------------------------------------------
 
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
@@ -84,7 +104,6 @@ call plug#end()
 
 " noremap <leader>lv :PdfView <CR>
 
-set backspace=indent,eol,start
 " autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
 

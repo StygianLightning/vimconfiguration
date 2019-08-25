@@ -96,6 +96,7 @@ call plug#begin('~/vimfiles/plugged')
 " Plug 'lervag/vimtex'
 Plug 'haya14busa/incsearch.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
 " Plug 'elzr/vim-json'
 
 " Initialize plugin system

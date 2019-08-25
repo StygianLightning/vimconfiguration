@@ -67,6 +67,8 @@ let g:rustfmt_autosave=1
 inoremap jk <ESC> 
 " allow applying the last action to the selected text/lines
 vnoremap . :norm.<CR> 
+" treat ; as :
+nmap ; :
 
 "unmap arrow keys
 noremap <Up> <Nop>

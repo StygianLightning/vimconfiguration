@@ -56,6 +56,8 @@ autocmd VimEnter * set vb t_vb=
 
 set tm=500
 
+" Rust settings
+let g:rustfmt_autosave=1
 
 " --------------------------------------------
 "  MAPPINGS
@@ -97,6 +99,7 @@ call plug#begin('~/vimfiles/plugged')
 Plug 'haya14busa/incsearch.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
+Plug 'rust-lang/rust.vim'
 " Plug 'elzr/vim-json'
 
 " Initialize plugin system

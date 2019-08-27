@@ -86,23 +86,23 @@ inoremap <c-s> <c-o>:Update<CR><CR>
 " --------------------------------------------
 
 " Install Plug package manager
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
+" if empty(glob('~/.vim/autoload/plug.vim'))
+  " silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    " \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  " autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+" endif
 
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
-call plug#begin('~/vimfiles/plugged')
+call plug#begin('~/.local/share/nvim/plugged')
 
 " Plug 'lervag/vimtex'
 Plug 'haya14busa/incsearch.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'rust-lang/rust.vim'
-" Plug 'elzr/vim-json'
+Plug 'elzr/vim-json'
 
 " Initialize plugin system
 call plug#end()
@@ -117,6 +117,6 @@ call plug#end()
 
 " noremap <leader>lv :PdfView <CR>
 
-" autocmd vimenter * NERDTree
+autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
 

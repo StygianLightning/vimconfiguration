@@ -117,6 +117,7 @@ call plug#end()
 
 " noremap <leader>lv :PdfView <CR>
 
-autocmd vimenter * NERDTree
+" uncomment this to automatically open NERDTree upon starting nvim
+" autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
 

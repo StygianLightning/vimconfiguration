@@ -12,6 +12,7 @@ set hidden
 " Set to auto read when a file is changed from the outside
 set autoread
 
+" Colourscheme
 " colo murphy
 
 set nowrap "don't wrap lines
@@ -56,18 +57,12 @@ autocmd VimEnter * set vb t_vb=
 
 set tm=500
 
-" Rust settings
-let g:rustfmt_autosave=1
-
 " --------------------------------------------
 "  MAPPINGS
 " --------------------------------------------
-"
-"treat jk as ESC
 inoremap jk <ESC> 
 " allow applying the last action to the selected text/lines
 vnoremap . :norm.<CR> 
-" treat ; as :
 nmap ; :
 
 "unmap arrow keys
@@ -82,10 +77,18 @@ vmap <C-s> <esc>:w<CR>gv
 inoremap <c-s> <c-o>:Update<CR><CR>
 
 " --------------------------------------------
+"  LEADER MAPPINGS
+" --------------------------------------------
+nmap <leader>v :vsplit<CR>
+nmap <leader>t :tabnew<CR>
+nmap <leader>q :qa<CR>
+
+" --------------------------------------------
 "  PLUGINS
 " --------------------------------------------
 
 " Install Plug package manager
+" These instructions are for vim; update them as necessary for nvim!
 " if empty(glob('~/.vim/autoload/plug.vim'))
   " silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     " \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -106,16 +109,6 @@ Plug 'elzr/vim-json'
 
 " Initialize plugin system
 call plug#end()
-
-" command PdfLatex silent exec "!pdflatex -synctex=1 -interaction=nonstopmode main.tex"
-" command Bibtex silent exec "!bibtex main"
-" command PdfLatexDebug execute "!pdflatex -synctex=1 -interaction=nonstopmode main.tex"
-
-" command PdfView silent! exec "!sumatrapdf main.pdf"
-
-" noremap <leader>ll :PdfLatex <CR> :Bibtex <CR> :PdfLatex <CR> :PdfLatex <CR> 
-
-" noremap <leader>lv :PdfView <CR>
 
 " uncomment this to automatically open NERDTree upon starting nvim
 " autocmd vimenter * NERDTree

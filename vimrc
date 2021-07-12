@@ -228,7 +228,7 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.local/share/nvim/plugged')
 
-" Plug 'lervag/vimtex'
+Plug 'lervag/vimtex'
 Plug 'haya14busa/incsearch.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'

@@ -157,15 +157,9 @@ let g:ycm_language_server =
 let g:ycm_global_ycm_extra_conf = '~/configuration/vimconfiguration/ycm_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_completion = 1
 
-" nnoremap <leader><d> :YcmC GoToDefinition<CR>
 nnoremap <M-d> :YcmC GoToDefinition<CR>
-
-" nnoremap <leader><u> :YcmC GoToReferences<CR>
 nnoremap <M-u> :YcmC GoToReferences<CR>
-
-" nnoremap <leader><r> :YcmC RefactorRename  
 nnoremap <M-r> :YcmC RefactorRename  
-
 nmap <leader>d :YcmC GetDoc<CR>
 
 " Alt + Enter -> FixIt
